@@ -1,0 +1,62 @@
+\documentclass[letter, 12pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+ %This package just generates Lorem Ipsum filler text. 
+\usepackage{graphicx}
+\usepackage{fullpage} % changes the margin
+\usepackage{natbib}
+\usepackage{textcomp}
+\bibliographystyle{abbrvnat}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\begin{document}
+%Update this information!!!!
+\noindent
+\large\textbf{CMPT 440 -- Spring 2019: Quantum Finite Automata} \\ \\
+\textbf{Jacob Itz} \\
+\normalsize   Due Date: 1/5/2019
+
+
+\section*{Introduction and Background}
+A Quantum Finite Automaton(QFA) is similar to a Deterministic Finite Automaton(DFA) in a few ways and understanding DFAs is crucial to understanding QFAs.  There are however a multitude of properties which make QFAs especially interesting and potentially extremely useful.  A 1-way QFA is definied  by \cite{ambainis19981} with the six-tuple: $M = (Q, \Sigma, \delta, q_0, Q_a_c_c, Q_r_e_j)$ where 
+\begin{itemize}
+    \item Q = Finite set of states in M,
+    \item $\Sigma = The alphabet of symbols accepted$,
+    \item $\delta = The transition function$,
+    \item $q_0 = The initial state of M$,
+    \item $Q_a_c_c = The accepting states of M$,
+    \item $Q_r_e_j = The rejecting states of M$
+\end{itemize}
+Constructing a QFA to accept the same language as a DFA can yield a QFA with exponentially less states.  \cite{ambainis19981} first showed that a language $L_n = {a^i| i is divisible by n}$ can be recognized with O(log n) states.  Specifically, QFAs can accept a periodic language $L_n$ over a one-letter alphabet with a period $n$ in O(\sqrt{n}). So, $a^i \in L$ if and only if $a^(i+n) \in L$. \cite{ambainis2011quantum}.
+
+The transition function for a QFA on a symbol in alphabet $M$ maps $Q \times \Gamma \times Q$ to C.  Where $\Gamma$ is the working alphabet of $M$ such that $\Gamma = \Sigma \cup \{c, \$\}$ where c and \$ represent the left and right bounds of the input string. \cite{ambainis19981}  
+
+
+
+
+
+
+
+%=============================================
+\bibliographystyle{acl}
+\bibliography{Cites.bib}
+
+\end{document}
+
+
+\ifx
+Comments!
+\fi
+
+% ===========
+
+\ifx
+
+%==============
+
+% References if you want it manual
+
+% \bibitem{Robotics} Fred G. Martin \emph{Robotics Explorations: A Hands-On Introduction to Engineering}. New Jersey: Prentice Hall.
+
+% \bibitem{Flueck}  Flueck, Alexander J. 2005. \emph{ECE 100}[online]. Chicago: Illinois Institute of Technology, Electrical and Computer Engineering Department, 2005 [cited 30
+% August 2005]. Available from World Wide Web: (http://www.ece.iit.edu/~flueck/ece100).
+
