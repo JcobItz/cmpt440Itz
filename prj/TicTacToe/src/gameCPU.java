@@ -140,7 +140,7 @@ public class gameCPU {
 	}
 	public boolean openSlot(int row) {
 		for(int i = 0; i < rows[row].length; i++) {
-			if(rows[row][i][1] == '0') {
+			if(rows[row][i][1] == 0) {
 				System.out.println("slot exists");
 				return true;
 			}

@@ -224,7 +224,7 @@ public class GameBoard {
 			isPlayer1 = false;
 			label.setText("X");
 			gString.setText(gameString.toString());
-			if (controller.processX(xString.toString())) {
+			if (controller.processX(gameString.toString())) {
 				winMsg.setText("X Wins");
 				int res = JOptionPane.showConfirmDialog(null, "X won! Would you like to play again?");
 				switch(res) {
